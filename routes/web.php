@@ -13,3 +13,12 @@ Route::get('/about', function () {
 Route::get('/contact', function () {
     return '<h1>Contact Page</h1>';
 });
+
+
+Route::get('/news/{id}', function ($id) {
+    return "<h1>New = {$id}</h1>";
+});
+
+Route::get('/product/{id}', function ($id) {
+    return '<h1>Product = '.$id.'</h1>';
+});
