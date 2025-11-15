@@ -58,5 +58,9 @@ Route::group(['prefix' => 'user'], function() {
  * Example - Route::post
  */
 
+Route::fallback(function () {
+    return '<h1>404 - Page Not Found</h1>';
+});
+
 
 
