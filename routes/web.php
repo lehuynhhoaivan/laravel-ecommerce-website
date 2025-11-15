@@ -34,3 +34,19 @@ Route::get('/course', function () {
     return "<h2><a href='".route('news.page', ['id' => 2])."'>News</a></h2>";
 });
 
+Route::group(['prefix' => 'user'], function() {
+    Route::get('/', function() {
+        return '<h2>User List</h2>';
+    });
+
+    Route::get('/create', function() {
+        return '<h2>User Create</h2>';
+    });
+
+    Route::get('/show', function() {
+        return '<h2>User Show</h2>';
+    });
+});
+
+
+
