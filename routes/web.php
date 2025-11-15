@@ -48,5 +48,15 @@ Route::group(['prefix' => 'user'], function() {
     });
 });
 
+/**
+ * GET - Request a resource
+ * POST - Create a new resource
+ * PUT - Update a resource
+ * PATCH - Modify a resource
+ * DELETE - Move a resource
+ * ///////////////////////////
+ * Example - Route::post
+ */
+
 
 
