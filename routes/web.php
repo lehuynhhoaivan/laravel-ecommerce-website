@@ -7,7 +7,12 @@ Route::get('/', function () {
 });
 
 Route::get('/about', function () {
-    return view('about.index');
+    $aboutOne = 'About One';
+    $aboutTwo = 'About Two';
+    return view("about.index", [
+        'aboutOne' => $aboutOne,
+        'aboutTwo' => $aboutTwo
+    ]); // compact('aboutOne', 'aboutTwo')
 })->name('about.page');
 
 Route::get('/contact', function () {
