@@ -7,7 +7,7 @@ Route::get('/', function () {
 });
 
 Route::get('/about', function () {
-    return '<h1>About Page</h1>';
+    return view('about.index');
 })->name('about.page');
 
 Route::get('/contact', function () {
@@ -62,5 +62,12 @@ Route::fallback(function () {
     return '<h1>404 - Page Not Found</h1>';
 });
 
+/**
+ * MVC
+ * ----------
+ * M - Model (Data)
+ * V - View (UI)
+ * C - Controller (Logic)
+ */
 
 
