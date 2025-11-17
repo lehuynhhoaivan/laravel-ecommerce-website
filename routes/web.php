@@ -28,8 +28,9 @@ Route::get('/product/{id}', function ($id) {
 });
 
 Route::get('/home', function () {
-    return "<h2><a href='/about'>About</a></h2>";
-});
+    // return "<h2><a href='/about'>About</a></h2>";
+    return view('home.index');
+})->name('home.page');
 
 Route::get('/content', function () {
     return "<h2><a href='".route('about.page')."'>About</a></h2>";
