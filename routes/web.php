@@ -19,27 +19,33 @@ Route::get('/contact', function () {
     $textContents = [
         [
             'content' => 'Content One',
-            'text' => 'Lorem ipsum dolor sit amet consectetur.'
+            'text' => 'Lorem ipsum dolor sit amet consectetur.',
+            'status' => 'completed'
         ],
         [
             'content' => 'Content Two',
-            'text' => 'Lorem ipsum dolor sit amet consectetur.'
+            'text' => 'Lorem ipsum dolor sit amet consectetur.',
+            'status' => 'completed'
         ],
         [
             'content' => 'Content Three',
-            'text' => 'Lorem ipsum dolor sit amet consectetur.'
+            'text' => 'Lorem ipsum dolor sit amet consectetur.',
+            'status' => 'completed'
         ],
         [
             'content' => 'Content Four',
-            'text' => 'Lorem ipsum dolor sit amet consectetur.'
+            'text' => 'Lorem ipsum dolor sit amet consectetur.',
+            'status' => 'completed'
         ],
         [
             'content' => 'Content Five',
-            'text' => 'Lorem ipsum dolor sit amet consectetur.'
+            'text' => 'Lorem ipsum dolor sit amet consectetur.',
+            'status' => 'completed'
         ],
         [
             'content' => 'Content Six',
-            'text' => 'Lorem ipsum dolor sit amet consectetur.'
+            'text' => 'Lorem ipsum dolor sit amet consectetur.',
+            'status' => 'pending'
         ]
     ];
     // return '<h1>Contact Page</h1>';
