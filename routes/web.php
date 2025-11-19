@@ -124,7 +124,7 @@ Route::fallback(function () {
 });
 
 /**
- * MVC
+ * Controller MVC
  * ----------
  * M - Model (Data)
  * V - View (UI)
