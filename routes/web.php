@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -60,32 +61,8 @@ Route::get('/product/{id}', function ($id) {
     return '<h1>Product = ' . $id . '</h1>';
 });
 
-Route::get('/home', function () {
-    $blogs = [
-        [
-            'title' => 'Title One',
-            'body' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.'
-        ],
-        [
-            'title' => 'Title Two',
-            'body' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.'
-        ],
-        [
-            'title' => 'Title Three',
-            'body' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.'
-        ],
-        [
-            'title' => 'Title Four',
-            'body' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.'
-        ],
-        [
-            'title' => 'Title Five',
-            'body' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.'
-        ]
-    ];
-    // return "<h2><a href='/about'>About</a></h2>";
-    return view('home.index', ['blogs' => $blogs]);
-})->name('home.page');
+Route::get('/home', [HomeController::class, 'index'])->name('home.page');
+// return "<h2><a href='/about'>About</a></h2>";
 
 Route::get('/content', function () {
     return "<h2><a href='" . route('about.page') . "'>About</a></h2>";
