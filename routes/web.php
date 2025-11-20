@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
@@ -8,18 +9,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/about', function () {
-    $aboutOne = 'About One';
-    $aboutTwo = 'About Two';
-    return view("about.index", [
-        'aboutOne' => $aboutOne,
-        'aboutTwo' => $aboutTwo
-    ]); // compact('aboutOne', 'aboutTwo')
-})->name('about.page');
+Route::get('/about', AboutController::class)->name('about.page');
 
 Route::get('/contact', function () {
     $textContents = [
-        [
+        [ 
             'content' => 'Content One',
             'text' => 'Lorem ipsum dolor sit amet consectetur.',
             'status' => 'completed'
