@@ -7,18 +7,19 @@
         <h2 class="text-center mb-3">Login</h2>
         <div class="card">
             <div class="cart-body p-3">
-                <form action="">
+                <form action="{{ route('login.handle') }}" method="POST">
+                    @csrf
                     <div class="mb-2">
                         <label for="" class="form-label">User Name</label>
-                        <input type="text" class="form-control">
+                        <input type="text" name="username" class="form-control">
                     </div>
                     <div class="mb-2">
                         <label for="" class="form-label">User Email</label>
-                        <input type="email" class="form-control">
+                        <input type="email" name="email" class="form-control">
                     </div>
                     <div class="mb-3">
                         <label for="" class="form-label">User Password</label>
-                        <input type="password" class="form-control">
+                        <input type="password" name="password" class="form-control">
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>

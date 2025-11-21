@@ -107,3 +107,5 @@ Route::fallback(function () {
 Route::resource('/blogs', BlogController::class);
 
 Route::get('/login', [LoginController::class, 'index']);
+
+Route::post('/login', [LoginController::class, 'handleLogin'])->name('login.handle');
