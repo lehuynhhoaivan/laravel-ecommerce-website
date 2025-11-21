@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
+use App\Http\Requests\LoginRequest;
 
 class LoginController extends Controller
 {
@@ -12,7 +13,7 @@ class LoginController extends Controller
         return View('login.index');
     }
 
-    function handleLogin(Request $request) {
+    function handleLogin(LoginRequest $request) {
         // echo $_POST['username'];
         // echo '<br>';
         // echo $_POST['email'];
@@ -25,10 +26,7 @@ class LoginController extends Controller
 
         // return $request;
 
-        $request->validate([
-            'username' => 'required',
-            'email' => 'required',
-            'password' => 'required'
-        ]);
+        $request->validated();
+        return $request;
     }
 }
