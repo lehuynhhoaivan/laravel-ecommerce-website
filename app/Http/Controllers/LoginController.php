@@ -26,7 +26,6 @@ class LoginController extends Controller
 
         // return $request;
 
-        $request->validated();
         return $request;
     }
 }
