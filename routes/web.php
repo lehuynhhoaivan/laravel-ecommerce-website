@@ -6,6 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\DB;
 
 Route::get('/', function () {
     return view('welcome');
@@ -114,3 +115,7 @@ Route::post('/login', [LoginController::class, 'handleLogin'])->name('login.hand
 Route::get('/register', [RegisterController::class, 'index']);
 
 Route::post('/register', [RegisterController::class, 'handleRegister'])->name('register.handle');
+
+Route::get('/test-db', function() {
+    dd(DB::connection()->getPDO());
+});
