@@ -12,10 +12,10 @@ class UsersTableSeeder extends Seeder
      */
     public function run(): void
     {
-        // \App\Models\User::factory(50)->create();
+        \App\Models\User::factory(50)->create();
         
         // Xóa dữ liệu cũ
-        \App\Models\User::truncate();
+        // \App\Models\User::truncate();
 
     }
 }
