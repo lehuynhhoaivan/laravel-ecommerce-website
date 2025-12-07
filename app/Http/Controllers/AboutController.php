@@ -16,6 +16,8 @@ class AboutController extends Controller
 
         // return DB::table('users')->find(1);
 
+        // return DB::table('users')->pluck('name', 'id');
+
         $aboutOne = 'About One';
         $aboutTwo = 'About Two';
         return view("about.index", [
