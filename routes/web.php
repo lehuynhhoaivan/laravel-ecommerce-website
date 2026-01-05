@@ -4,6 +4,7 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
@@ -119,3 +120,5 @@ Route::post('/register', [RegisterController::class, 'handleRegister'])->name('r
 Route::get('/test-db', function() {
     dd(DB::connection()->getPDO());
 });
+
+Route::get('/products', [ProductController::class, 'index']);

@@ -5,18 +5,13 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class UsersTableSeeder extends Seeder
+class UserTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        // Tạo 50 người dùng giả lập
-        \App\Models\User::factory(50)->create();
-        
-        // Xóa dữ liệu cũ
-        // \App\Models\User::truncate();
-
+        //
     }
 }
