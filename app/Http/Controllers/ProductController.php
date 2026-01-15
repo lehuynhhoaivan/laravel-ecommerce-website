@@ -11,6 +11,31 @@ class ProductController extends Controller
 {
     function index() {
 
+    DB::table('products')->insert([
+        [   'name' => 'Sản phẩm 1',
+            'slug' => 'san-pham-1',
+            'description' => 'Mô tả sản phẩm 1',
+            'price' => 150000,
+            'quantity' => 20,
+            'image' => 'product-new1.jpg',
+            'status' => 1,
+            'created_at' => now(),
+            'updated_at' => now(),
+        ],[
+            'name' => 'Sản phẩm 2',
+            'slug' => 'san-pham-2',
+            'description' => 'Mô tả sản phẩm 2',
+            'price' => 200000,
+            'quantity' => 15,
+            'image' => 'product-new2.jpg',
+            'status' => 1,
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]    
+    ]);
+        dd('Đã thêm sản phẩm mới');
+        $products = Product::all();
+
         // Query Builder: Lấy tất cả sản phẩm từ bảng products
         // return DB::table('products')->get();
 
@@ -24,9 +49,10 @@ class ProductController extends Controller
         // return Product::where('status', 1)->get();
 
         // Eloquent ORM: Lấy sản phẩm có price > 50000 và status = 1
-        return Product::where('price', '>', 50000)
-                        ->where('status', 0)
-                        ->get();
-        return view('product.index');
+        // return Product::where('price', '>', 50000)
+        //                 ->where('status', 0)
+        //                 ->get();
+
+        return view('product.index', ['products' => $products]);
     }
 }
